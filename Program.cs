@@ -18,7 +18,6 @@ namespace deckOfCards
             player.PrintHand();
             player.Discard(4);
             player.Discard(2);
-            // player.Discard(8);
             player.PrintHand();
         }
     }
