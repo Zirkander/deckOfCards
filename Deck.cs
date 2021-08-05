@@ -14,6 +14,14 @@ namespace deckOfCards
                 "Clubs", "Spades", "Hearts", "Diamonds"
             };
 
+            Dictionary<int, string> face = new Dictionary<int, string>()
+            {
+                {1, "Ace"},
+                {11, "Jack"},
+                {12, "Queen"},
+                {13, "King"},
+            };
+
             foreach (string suit in suits)
             {
                 for (int i = 1; i <= 13; i++)
