@@ -9,6 +9,32 @@ namespace deckOfCards
 
         public Deck()
         {
+            Reset();
+        }
+        public void Print()
+        {
+            foreach (Card card in Cards)
+            {
+                Console.WriteLine(card);
+            }
+        }
+
+        public Card Deal()
+        {
+            if (Cards.Count == 0)
+            {
+                return null;
+            }
+
+            Card dealCards = Cards[Cards.Count - 1];
+            Cards.RemoveAt(Cards.Count - 1);
+            return dealCards;
+        }
+
+        public void Reset()
+        {
+            Cards = new List<Card>();
+
             string[] suits = new string[]
             {
                 "Clubs", "Spades", "Hearts", "Diamonds"
@@ -36,25 +62,6 @@ namespace deckOfCards
                     Cards.Add(card);
                 }
             }
-        }
-        public void Print()
-        {
-            foreach (Card card in Cards)
-            {
-                Console.WriteLine(card);
-            }
-        }
-
-        public Card Deal()
-        {
-            if (Cards.Count == 0)
-            {
-                return null;
-            }
-
-            Card dealCards = Cards[Cards.Count - 1];
-            Cards.RemoveAt(Cards.Count - 1);
-            return dealCards;
         }
     }
 }
