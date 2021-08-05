@@ -29,5 +29,20 @@ namespace deckOfCards
                 Console.WriteLine(card);
             }
         }
+
+        public void Discard(int x)
+        {
+            if (Hand.Count == 0)
+            {
+                Console.WriteLine($"There are no cards in {Name}'s hand");
+            }
+
+            if (Hand[x] == null)
+            {
+                Console.WriteLine("That isn't a valid card!");
+            }
+
+            Hand[x] = null;
+        }
     }
 }

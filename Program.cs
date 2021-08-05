@@ -12,6 +12,13 @@ namespace deckOfCards
             Player player = new Player("Buddy");
             player.Draw(deck);
             player.Draw(deck);
+            player.Draw(deck);
+            player.Draw(deck);
+            player.Draw(deck);
+            player.PrintHand();
+            player.Discard(4);
+            player.Discard(2);
+            // player.Discard(8);
             player.PrintHand();
         }
     }
