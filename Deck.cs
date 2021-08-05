@@ -44,5 +44,17 @@ namespace deckOfCards
                 Console.WriteLine(card);
             }
         }
+
+        public Card Deal()
+        {
+            if (Cards.Count == 0)
+            {
+                return null;
+            }
+
+            Card dealCards = Cards[Cards.Count - 1];
+            Cards.RemoveAt(Cards.Count - 1);
+            return dealCards;
+        }
     }
 }
