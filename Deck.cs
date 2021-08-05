@@ -26,7 +26,13 @@ namespace deckOfCards
             {
                 for (int i = 1; i <= 13; i++)
                 {
-                    Card card = new Card(i.ToString(), suit, i);
+                    string name = i.ToString();
+                    if (face.ContainsKey(i))
+                    {
+                        name = face[i];
+                    }
+
+                    Card card = new Card(name, suit, i);
                     Cards.Add(card);
                 }
             }
