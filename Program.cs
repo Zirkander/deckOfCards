@@ -8,13 +8,11 @@ namespace deckOfCards
         {
             Deck deck = new Deck();
             deck.Shuffle();
-            deck.Print();
-            Console.WriteLine("*******************************");
-            Console.WriteLine(deck.Deal());
-            Console.WriteLine(deck.Deal());
-            Console.WriteLine("*******************************");
-            deck.Reset();
-            deck.Print();
+
+            Player player = new Player("Buddy");
+            player.Draw(deck);
+            player.Draw(deck);
+            player.PrintHand();
         }
     }
 }
