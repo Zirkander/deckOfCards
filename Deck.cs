@@ -63,5 +63,17 @@ namespace deckOfCards
                 }
             }
         }
+
+        public void Shuffle()
+        {
+            Random rand = new Random();
+            for (int i = 0; i < Cards.Count; i++)
+            {
+                int randCard = rand.Next(Cards.Count);
+                Card temp = Cards[i];
+                Cards[i] = Cards[randCard];
+                Cards[randCard] = temp;
+            }
+        }
     }
 }
